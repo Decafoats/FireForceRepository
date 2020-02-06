@@ -1,0 +1,26 @@
+Affinity map contributions
+For our affinity map we split our project ideas into different aspects
+1. Design - How would we design our app/project
+2. Tools - The technology we would use to build
+3. Kid Friendly - How will we make our project engaging to children
+
+Phase 1
+We spent some time to brainstorm any ideas for each theme
+All members wrote their ideas in different coloured sticky notes
+Dark Green -Jonathan
+Blue - Jack
+Neon Green - Zain
+
+Phase 2
+We then put all of the items in each category in different subcategories.
+1. Design
+	-UI   How the interface will be designed
+	-UX   experiences we can achieve
+2. Tools
+	-Software   Any programming language or software available
+	-hardware   Any Hardware that we can use 
+3. Kid Firendly
+	-Grab Attention   How to first engage children to dial and talk
+	-Reward System    A system that will encourage learning
+	-Keep attention   Something to keep children engaged 
+	-Kid retention    How to achieve deep learning 
