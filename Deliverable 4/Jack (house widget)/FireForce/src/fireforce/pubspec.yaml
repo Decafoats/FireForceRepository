@@ -59,6 +59,8 @@ flutter:
    - assets/images/fire.png
    - assets/images/fireman.png
    - assets/images/dog_stand.png
+   - assets/images/street.png
+   - assets/images/house.png
    - assets/images/dog_stand_thug.png
    - assets/music/correct.wav
    - assets/music/wrong.mp3

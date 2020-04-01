@@ -7,6 +7,7 @@ import 'package:showcaseview/showcaseview.dart';
 import 'package:fireforce/escape_planning/escape_planning.dart';
 import 'package:fireforce/info/info.dart';
 import 'package:fireforce/phone/phone.dart';
+import 'package:fireforce/house/house.dart';
 import 'package:fireforce/qa/qa.dart';
 import 'package:fireforce/generic/navbar.dart';
 import 'package:fireforce/generic/animations/fade_animations.dart';
@@ -253,6 +254,9 @@ class _MainPageState extends State<MainPageWidget> {
     } else if (data == Icons.question_answer) {
       Navigator.push(context,
           MaterialPageRoute(builder: (BuildContext context) => QAWidget()));
+    } else if (data == Icons.home){
+      Navigator.push(context,
+          MaterialPageRoute(builder: (BuildContext context) => HouseWidget()));
     } else {
       Navigator.push(context,
           MaterialPageRoute(builder: (BuildContext context) => EscapeWidget()));
