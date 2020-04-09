@@ -47,8 +47,10 @@ class HousePage extends State<HousePageWidget>{
                   ),
                 ),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 65, left: 200),
+          Container(
+              padding: EdgeInsets.only(right: 40, top: 30.0),
+              child: Align(
+                alignment: Alignment.bottomRight,
             child: IconButton(
              icon: Icon(Icons.arrow_forward, size: 70),
               color: Colors.white,
@@ -59,6 +61,7 @@ class HousePage extends State<HousePageWidget>{
                 );
               }
             ),
+          ),
           ),
         ],
       ),
@@ -114,9 +117,12 @@ class StreetPage extends State<StreetPageWidget> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 50, right: 250),
-    child: IconButton(
+
+            Container(
+              padding: EdgeInsets.only(left: 20, top: 20.0),
+              child: Align(
+       alignment: Alignment.bottomLeft,
+      child: IconButton(
         icon: Icon(Icons.arrow_back, size: 70),
         color: Colors.white,
         onPressed: () {
@@ -126,6 +132,8 @@ class StreetPage extends State<StreetPageWidget> {
           );
         }
         ),
+
+            ),
             ),
           ],
         ),

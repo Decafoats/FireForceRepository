@@ -133,7 +133,7 @@ class _MainPageState extends State<MainPageWidget> {
                     FadeVerticalAnimationWidget(
                         delay: 1.5,
                         child: Padding(
-                          padding: EdgeInsets.only(left: 10, top: 5),
+                          padding: EdgeInsets.only(left: 30, top: 5),
                           child: Text(
                             'Safety Tip of the day!',
                             style: TextStyle(
@@ -192,10 +192,10 @@ class _MainPageState extends State<MainPageWidget> {
                           ),
                         )),
                     SizedBox(
-                      height: 10,
+                      height: 1,
                     ),
                     Text(
-                      'Tap on one of the tiles in this box to go to another screen.',
+                      'Tap on one of the tiles',
                       style: TextStyle(color: Colors.white, fontSize: 16),
                     )
                   ],

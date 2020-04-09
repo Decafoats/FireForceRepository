@@ -35,9 +35,11 @@
   </component>
   <component name="ProjectId" id="1Zm1UBbICJRyZURy4DwaJQYSZpv" />
   <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/src/fireforce" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fireforce" />
     <property name="project.structure.last.edited" value="Variables" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -48,8 +50,9 @@
     <option name="myCommands">
       <command value="flutter run" />
       <command value="flutter devices" />
-      <command value="flutter" />
       <command value="flutter doctor" />
+      <command value="flutter" />
+      <command value="flutter build apk" />
     </option>
   </component>
   <component name="RunDashboard">

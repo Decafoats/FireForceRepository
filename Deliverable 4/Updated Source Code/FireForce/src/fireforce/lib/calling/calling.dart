@@ -31,7 +31,7 @@ class CallingPage extends State<CallingPageWidget> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [Color(0xFFff7944), Color(0xFFf5326f)])),
-      padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 40.0),
+      padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 35.0),
       width: double.infinity,
       child: Column(
         children: <Widget>[
@@ -41,7 +41,7 @@ class CallingPage extends State<CallingPageWidget> {
             child: Image.asset('assets/images/fireman.png'),
           ),
           Padding(
-              padding: EdgeInsets.only(top: 5),
+              padding: EdgeInsets.only(top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -67,12 +67,12 @@ class CallingPage extends State<CallingPageWidget> {
                   mainAxisSpacing: 10.0,
                   crossAxisSpacing: 10.0,
                   children: [
-                    {'icon': Icons.mic_off, 'text': 'Mic'},
-                    {'icon': Icons.grid_on, 'text': 'Grid'},
-                    {'icon': Icons.volume_up, 'text': 'Volume'},
-                    {'icon': Icons.trending_up, 'text': 'Up'},
-                    {'icon': Icons.video_call, 'text': 'Video'},
-                    {'icon': Icons.people, 'text': 'Contact'},
+                    {'icon': Icons.mic_off},
+                    {'icon': Icons.grid_on},
+                    {'icon': Icons.volume_up},
+                    {'icon': Icons.trending_up},
+                    {'icon': Icons.video_call},
+                    {'icon': Icons.people},
                   ]
                       .map((item) => GestureDetector(
                           onTap: () => {},
@@ -97,18 +97,12 @@ class CallingPage extends State<CallingPageWidget> {
                                               color: Colors.white,
                                               size: 50,
                                             ),
-                                            Text(
-                                              item['text'],
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 16),
-                                            )
                                           ]))),
                             ],
                           )))
                       .toList())),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
           Icon(
             Icons.phone_in_talk,
@@ -117,7 +111,7 @@ class CallingPage extends State<CallingPageWidget> {
           ),
           Expanded(
               child: Align(
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment(0.0, 5),
                   child: FadeVerticalAnimationWidget(
                       delay: 0.8,
                       child: PhoneSpeechWidget(
@@ -125,12 +119,110 @@ class CallingPage extends State<CallingPageWidget> {
                         icon: Icons.people_outline,
                         color: Colors.greenAccent,
                         textColor: Colors.black87,
-                      )))),
+                       )))),
+          Padding(
+            padding: EdgeInsets.only(bottom: 20, left: 200),
+            child: RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ScriptWidget()),
+                  );
+                },
+                textColor: Colors.white,
+              color: Colors.deepOrangeAccent,
+                  padding: const EdgeInsets.all(5.0),
+                  child: const Text(
+                      'Script',
+                      style: TextStyle(fontSize: 18)
+                  ),
+              ),
+            ),
           SizedBox(
             height: 10,
           ),
         ],
       ),
     ));
+  }
+}
+
+class ScriptWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+          appBar: NavbarWidget(title: 'Script').build(context),
+          body: ScriptPageWidget(),
+        )
+    );
+  }
+}
+
+class ScriptPageWidget extends StatefulWidget{
+  @override
+  ScriptPage createState() => ScriptPage();
+}
+
+class ScriptPage extends State<ScriptPageWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Color(0xFFff7944), Color(0xFFf5326f)])),
+        padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
+        height: double.infinity,
+        width: double.infinity,
+        child: Column(
+          children: <Widget>[
+            Flexible(
+              flex: 9,
+              child: RichText(
+                text: TextSpan(
+                  style: DefaultTextStyle.of(context).style,
+                  children: <TextSpan>[
+                    TextSpan(text: 'Dispatch: One Moment. Regina Fire Department. How may I help you?\n\n'
+                        'Caller: There is a fire in my house.\n\n'
+                        'Dispatch: What is your address?\n\n'
+                        'Caller: My address is (house number) + (street name)\n\n'
+                        'Dispatch: Is anyone still in the house? Have you all met at a meeting point?\n\n'
+                        'Caller: [Yes/No] there [are/are\'nt] people in the house. We [have/have\'nt] met at a meeting point.\n\n'
+                        'Dispatch: What is your phone number?\n\n'
+                        'Caller: My phone number is (---) ---- ----\n\n'
+                        'Dispatch: Ok, the fire trucks are on their way. Don\'t go back into the house.',
+                        style: DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1.3, color: Colors.white)),
+                  ],
+                ),
+              ),
+            ),
+           Flexible(
+             flex: 1,
+           child: Align(
+              alignment: Alignment.bottomLeft,
+             child: RaisedButton(
+               onPressed: () {
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => CallingWidget()),
+                 );
+               },
+               textColor: Colors.white,
+               color: Colors.deepOrangeAccent,
+               padding: const EdgeInsets.all(5.0),
+               child: const Text(
+                   'Back',
+                   style: TextStyle(fontSize: 18)
+               ),
+             ),
+            ),
+               )
+          ],
+        ),
+      ),
+    );
   }
 }

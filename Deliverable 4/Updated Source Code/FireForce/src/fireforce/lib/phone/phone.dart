@@ -137,13 +137,12 @@ class _PhonePageState extends State<PhonePageWidget> {
                                         ),
                                       )),
                                   SizedBox(
-                                    height: 10,
+                                    height: 1,
                                   ),
-                                  Text(
-                                    'Tap to make an emergency call.',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 16),
-                                  )
+                                 FittedBox (fit:BoxFit.fill,
+                                   child: Text('Tap to make an \nemergency call.', style: TextStyle(
+                                       color: Colors.white, fontSize: 20))
+                                  ),
                                 ],
                               )),
                           child: GestureDetector(
@@ -172,12 +171,12 @@ class _PhonePageState extends State<PhonePageWidget> {
                       alignment: Alignment.bottomCenter,
                       child: FadeSoftAnimationWidget(
                           delay: 1.7,
-                          child: PhoneSpeechWidget(
-                            text: 'hey kid, press emergency to call 911!',
-                            icon: Icons.phone_locked,
-                            color: Colors.redAccent,
-                            textColor: Colors.black87,
-                          ),
+                              child: PhoneSpeechWidget(
+                                text: 'Press emergency to call 911!',
+                                icon: Icons.phone_locked,
+                                color: Colors.redAccent,
+                                textColor: Colors.black87,
+                              ),
                           key: UniqueKey())));
               return Expanded(
                   child: Column(
