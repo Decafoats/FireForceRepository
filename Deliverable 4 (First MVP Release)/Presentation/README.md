@@ -1,5 +1,5 @@
 # FireForce Presentations
-In this folder you'll find our PowerPoint slides as well as our script for the video we uploaded on YouTube.
+Here you'll find our PowerPoint slides as well as our script for the video we uploaded on YouTube.
 
 # Video!
 Click <a href="https://youtu.be/tST5P7lhfPo">HERE</a> to watch our video presentation!
