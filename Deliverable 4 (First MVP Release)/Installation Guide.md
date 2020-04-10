@@ -23,7 +23,7 @@
 ## Users
 ### Android
 1. if on windows(no mobile phone), download an android emulator for pc. Common ones are: bluestacks, and nox(you may need to consult external guides).
-1. download the .apk file that should be distributed with the project.
+1. download the [.apk](https://github.com/Decafoats/FireForceRepository/blob/master/Deliverable%204%20(First%20MVP%20Release)/app-release.apk) file that should be distributed with the project.
 2. import the .apk file into your android device or emulator(you may need to consult external guides).
 3. when importing, you may need to resolve any security issues for android devices(allow permission).
 4. launch the application by clicking on it.
